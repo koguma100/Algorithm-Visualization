@@ -7,7 +7,9 @@
       "config": {
         "includeFiles": [
           "api/templates/**",
-          "api/static/**"
+          "api/static/**",
+          "api/static/sorting.html",
+          "api/static/graph.html"
         ]
       }
     }

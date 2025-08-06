@@ -13,9 +13,3 @@ def sorting():
 @app.route('/graphs')
 def graphs():
     return render_template('graphs.html')
-
-@app.route('/debug')
-def debug():
-    template_path = os.path.join(app.template_folder, 'sorting.html')
-    exists = os.path.isfile(template_path)
-    return f"Template folder: {app.template_folder} <br> sorting.html exists: {exists}"
