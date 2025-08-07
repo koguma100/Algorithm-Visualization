@@ -22,3 +22,7 @@ def trees():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/debug-static')
+def debug_static():
+    return '<br>'.join(os.listdir(os.path.join(app.static_folder, 'css')))
