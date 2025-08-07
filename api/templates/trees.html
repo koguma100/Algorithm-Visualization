@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Tree Visuals</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <link rel="stylesheet" href="{{ url_for('assets', filename='css/nav.css') }}">
-  <link rel="stylesheet" href="{{ url_for('assets', filename='css/trees.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/trees.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
@@ -23,7 +23,7 @@
 
     <h1>Tree Visualization</h1>
     
-    <image src="{{ url_for('assets', filename='images/trees.jpeg') }}" alt="Tree Visualization" style="width: 700px; height: 437px;">
+    <image src="{{ url_for('static', filename='images/trees.jpeg') }}" alt="Tree Visualization" style="width: 700px; height: 437px;">
 
     <div class="wrapper">
       <div class="buttons">
