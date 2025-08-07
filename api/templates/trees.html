@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree Visuals</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/trees.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="page-container">
+    <nav class="navbar">
+      <div class="nav-title">Algorithm Visualizer</div>
+      <div class="nav-links">
+          <a href="/">Sorting</a>
+          <a href="/graphs">Graphs</a>
+          <a href="/trees">Trees</a>
+          <a href="/about">About</a>
+      </div>
+    </nav>
+
+    <h1>Tree Visualization</h1>
+    
+    <image src="{{ url_for('static', filename='images/trees.jpeg') }}" alt="Tree Visualization" style="width: 700px; height: 437px;">
+
+    <div class="wrapper">
+      <div class="buttons">
+
+      </div>
+
+      <div class="controls">
+          
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

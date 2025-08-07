@@ -8,62 +8,54 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    .bar {
-      fill: steelblue;
-    }
-    .bar:hover {
-      fill: orange;
-    }
-  </style>
 </head>
 <body>
+  <div class="page-container">
+    <nav class="navbar">
+      <div class="nav-title">Algorithm Visualizer</div>
+      <div class="nav-links">
+        <a href="/">Sorting</a>
+        <a href="/graphs">Graphs</a>
+        <a href="/trees">Trees</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
 
-  <nav class="navbar">
-    <div class="nav-title">Algorithm Visualizer</div>
-    <div class="nav-links">
-      <a href="/">Sorting</a>
-      <a href="/graphs">Graphs</a>
-      <a href="#">Trees</a>
-      <a href="#">About</a>
+    <h1>Sorting Visualization</h1>
+
+    <svg width="700" height="437"></svg>
+    
+    <div class="wrapper">
+      <div class="buttons">
+        <button id="sortButton" onClick="bubbleSort()">Bubble Sort</button>
+        <button id="sortButton" onClick="bogoSort()">BOGO Sort</button>
+        <button id="sortButton" onClick="quickSort()">Quick Sort</button>
+        <button id="sortButton" onClick="mergeSort()">Merge Sort</button>
+      </div>
+
+      <div class="controls">
+        <label for="speed">Speed:</label>
+        <select id="speed" onchange="setSpeed(this.value)">
+            <option value="500">Slow</option>
+            <option value="200" selected>Medium</option>
+            <option value="10">Fast</option>
+            <option value="2">Super Fast</option>
+        </select>
+        <label for="countSlider">Number of values: </label>
+        <span id="countValue">50</span>
+        <input type="range" id="countSlider" min="4" max="100" value="50" oninput="updateCount(this.value)">
+      </div>
     </div>
-  </nav>
-
-  <h1>Sorting Visualization</h1>
-
-  <svg width="700" height="437"></svg>
-  
-  <div class="wrapper">
-    <div class="buttons">
-      <button id="sortButton" onClick="bubbleSort()">Bubble Sort</button>
-      <button id="sortButton" onClick="bogoSort()">BOGO Sort</button>
-      <button id="sortButton" onClick="quickSort()">Quick Sort</button>
-      <button id="sortButton" onClick="mergeSort()">Merge Sort</button>
-    </div>
-
-    <div class="controls">
-      <label for="speed">Speed:</label>
-      <select id="speed" onchange="setSpeed(this.value)">
-          <option value="500">Slow</option>
-          <option value="200" selected>Medium</option>
-          <option value="10">Fast</option>
-          <option value="2">Super Fast</option>
-      </select>
-      <label for="countSlider">Number of values: </label>
-      <span id="countValue">50</span>
-      <input type="range" id="countSlider" min="4" max="100" value="50" oninput="updateCount(this.value)">
-    </div>
+    
+    
+    <footer class="links">
+      <span>Learn more about: </span>
+      <a href="https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/">Bubble Sort</a>
+      <a href="https://www.geeksforgeeks.org/dsa/bogosort-permutation-sort/">BOGO Sort</a>
+      <a href="https://www.geeksforgeeks.org/dsa/quick-sort-algorithm/">Quick Sort</a>
+      <a href="https://www.geeksforgeeks.org/search/?gq=merge+sort">Merge Sort</a>
+    </footer>
   </div>
-  
-  
-  <footer class="links">
-    <span>Learn more about: </span>
-    <a href="https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/">Bubble Sort</a>
-    <a href="https://www.geeksforgeeks.org/dsa/bogosort-permutation-sort/">BOGO Sort</a>
-    <a href="https://www.geeksforgeeks.org/dsa/quick-sort-algorithm/">Quick Sort</a>
-    <a href="https://www.geeksforgeeks.org/search/?gq=merge+sort">Merge Sort</a>
-  </footer>
-
   <script src="{{ url_for('static', filename='js/sorting.js') }}"></script>
 </body>
 </html>

@@ -7,67 +7,56 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/graphs.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    .bar {
-      fill: steelblue;
-    }
-    .bar:hover {
-      fill: orange;
-    }
-  </style>
 </head>
 <body>
-  
-  <nav class="navbar">
-    <div class="nav-title">Algorithm Visualizer</div>
-    <div class="nav-links">
-        <a href="/">Sorting</a>
-        <a href="/graphs">Graphs</a>
-        <a href="#">Trees</a>
-        <a href="#">About</a>
+  <div class="page-container">
+    <nav class="navbar">
+      <div class="nav-title">Algorithm Visualizer</div>
+      <div class="nav-links">
+          <a href="/">Sorting</a>
+          <a href="/graphs">Graphs</a>
+          <a href="/trees">Trees</a>
+          <a href="/about">About</a>
+      </div>
+    </nav>
+
+    <h1>Graph Visualization</h1>
+
+    <svg width="700" height="437"></svg>
+
+    <div class="wrapper">
+      <div class="buttons">
+          <button id="sortButton" onClick="dfsVisual()">DFS</button>
+          <button id="sortButton" onClick="bfsVisual()">BFS</button>
+      </div>
+
+      <div class="controls">
+          <label for="sccCheckbox">Is SCC:</label>
+          <input type="checkbox" id="sccCheckbox" checked onchange="toggleSCC(this.checked)">
+          <label for="speed">Speed:</label>
+          <select id="speed" onchange="setSpeed(this.value)">
+              <option value="1000">Slow</option>
+              <option value="600" selected>Medium</option>
+              <option value="200">Fast</option>
+          </select>
+          <label for="nodeCount">Number of nodes:</label>
+          <span id="nodeCountValue">4</span>
+          <input type="range" id="nodeCount" min="2" max="30" value="4" oninput="updateNodeCount(this.value)">
+          <span class="nodes">
+              Start Node: <input type="number" id="start-node" name="startNode" min="0" max="29" value="0">
+              End Node: <input type="number" id="end-node" name="endNode" min="0" max="29" value="1">
+          </span>
+      </div>
     </div>
-  </nav>
+    
 
-  <h1>Graph Visualization</h1>
+    <footer class="links">
+      <span>Learn more about: </span>
+      <a href="https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/">Breadth First Search (BFS)</a>
+      <a href="https://www.geeksforgeeks.org/dsa/depth-first-search-or-dfs-for-a-graph/">Depth First Search (DFS)</a>
+    </footer>
 
-  <svg width="700" height="437"></svg>
-
-  
-
-  <div class="wrapper">
-    <div class="buttons">
-        <button id="sortButton" onClick="dfsVisual()">DFS</button>
-        <button id="sortButton" onClick="bfsVisual()">BFS</button>
-    </div>
-
-    <div class="controls">
-        <label for="sccCheckbox">Is SCC:</label>
-        <input type="checkbox" id="sccCheckbox" checked onchange="toggleSCC(this.checked)">
-        <label for="speed">Speed:</label>
-        <select id="speed" onchange="setSpeed(this.value)">
-            <option value="1000">Slow</option>
-            <option value="600" selected>Medium</option>
-            <option value="200">Fast</option>
-        </select>
-        <label for="nodeCount">Number of nodes:</label>
-        <span id="nodeCountValue">4</span>
-        <input type="range" id="nodeCount" min="2" max="30" value="4" oninput="updateNodeCount(this.value)">
-        <span class="nodes">
-            Start Node: <input type="number" id="start-node" name="startNode" min="0" max="29" value="0">
-            End Node: <input type="number" id="end-node" name="endNode" min="0" max="29" value="1">
-        </span>
-    </div>
   </div>
-  
-
-  <footer class="links">
-    <span>Learn more about: </span>
-    <a href="https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/">Breadth First Search (BFS)</a>
-    <a href="https://www.geeksforgeeks.org/dsa/depth-first-search-or-dfs-for-a-graph/">Depth First Search (DFS)</a>
-  </footer>
-
-
   <script src="{{ url_for('static', filename='js/graph.js') }}"></script>
 </body>
 </html>

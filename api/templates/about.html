@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Algorithm Visualizer</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="nav-title">Algorithm Visualizer</div>
+    <div class="nav-links">
+        <a href="/">Sorting</a>
+        <a href="/graphs">Graphs</a>
+        <a href="/trees">Trees</a>
+        <a href="/about">About</a>
+    </div>
+  </nav>
+
+  <h1>About This Project</h1>
+  
+  <main>
+    
+    <p>
+      Algorithm Visualizer is a web-based educational platform that brings computer science concepts to life. 
+      Through interactive animations and clear visuals, it helps learners understand how sorting algorithms, graph traversals, 
+      and tree operations work behind the scenes.
+    </p>
+
+    <h2>About the Author</h2>
+    <p>
+      Hi, I'm <strong>Will Fralia</strong>, a software developer with interests in web development, cybersecurity, and machine learning.
+      I created this project to make learning algorithms more engaging and also brush up on my skills :).
+    </p>
+
+    <h2>Find Me Here</h2>
+    <div class="contact-links">
+      <a href="https://github.com/koguma100" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      <a href="https://www.linkedin.com/in/william-fralia-26a469272/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+    </div>
+  </main>
+
+  <section class="made-with">
+    <h2>Made With</h2>
+    <div class="tech-icons">
+        <img src="{{ url_for('static', filename='images/d3js.png') }}" alt="D3.js" title="D3.js">
+        <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask" title="Flask">
+    </div>
+  </section>
+
+  <footer class="footer">
+  </footer>
+
+</body>
+</html>

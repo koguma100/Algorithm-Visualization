@@ -90,3 +90,7 @@ label {
 .bar:hover {
   fill: #5dade2;
 }
+
+.bar:hover {
+  fill: orange;
+}
