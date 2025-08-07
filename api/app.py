@@ -4,7 +4,7 @@ from flask import Flask, render_template
 app = Flask(
     __name__, 
     template_folder='templates',
-    static_folder='static'
+    static_folder='assets',
 )
 
 @app.route('/')
@@ -22,7 +22,3 @@ def trees():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-@app.route('/debug-static')
-def debug_static():
-    return '<br>'.join(os.listdir(os.path.join(app.static_folder, 'css')))
