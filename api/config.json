@@ -1,0 +1,6 @@
+{
+  "includeFiles": [
+    "static/**/*",
+    "templates/**/*"
+  ]
+}
