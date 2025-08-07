@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>About | Algorithm Visualizer</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <link rel="stylesheet" href="{{ url_for('assets', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('assets', filename='css/about.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,8 +48,8 @@
   <section class="made-with">
     <h2>Made With</h2>
     <div class="tech-icons">
-        <a href="https://d3js.org"><img src="{{ url_for('static', filename='images/d3js.png') }}" alt="D3.js" title="D3.js"></a>
-        <a href="https://flask.palletsprojects.com/en/stable/"><img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask" title="Flask"></a>
+        <a href="https://d3js.org"><img src="{{ url_for('assets', filename='images/d3js.png') }}" alt="D3.js" title="D3.js"></a>
+        <a href="https://flask.palletsprojects.com/en/stable/"><img src="{{ url_for('assets', filename='images/flask.png') }}" alt="Flask" title="Flask"></a>
     </div>
   </section>
 
