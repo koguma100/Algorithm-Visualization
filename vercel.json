@@ -7,7 +7,7 @@
       "config": {
         "includeFiles": [
           "api/templates/**",
-          "api/static/**"
+          "api/static/**/*"
         ]
       }
     }
