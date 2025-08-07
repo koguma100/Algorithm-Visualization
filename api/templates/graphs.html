@@ -37,17 +37,18 @@
 
   <div class="wrapper">
     <div class="buttons">
-        <button id="sortButton" onClick="bubbleSort()">DFS</button>
-        <button id="sortButton" onClick="bubbleSort()">BFS</button>
+        <button id="sortButton" onClick="dfsVisual()">DFS</button>
+        <button id="sortButton" onClick="bfsVisual()">BFS</button>
     </div>
 
     <div class="controls">
+        <label for="sccCheckbox">Is SCC:</label>
+        <input type="checkbox" id="sccCheckbox" checked onchange="toggleSCC(this.checked)">
         <label for="speed">Speed:</label>
         <select id="speed" onchange="setSpeed(this.value)">
-            <option value="500">Slow</option>
-            <option value="200" selected>Medium</option>
-            <option value="10">Fast</option>
-            <option value="2">Super Fast</option>
+            <option value="1000">Slow</option>
+            <option value="600" selected>Medium</option>
+            <option value="200">Fast</option>
         </select>
         <label for="nodeCount">Number of nodes:</label>
         <span id="nodeCountValue">4</span>
@@ -68,6 +69,5 @@
 
 
   <script src="{{ url_for('static', filename='js/graph.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/utilties.js') }}"></script>
 </body>
 </html>

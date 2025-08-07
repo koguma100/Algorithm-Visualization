@@ -3,7 +3,8 @@ from flask import Flask, render_template
 
 app = Flask(
     __name__, 
-    template_folder=os.path.join(os.path.dirname(__file__), 'static')
+    template_folder='templates',
+    static_folder='static'
 )
 
 @app.route('/')
